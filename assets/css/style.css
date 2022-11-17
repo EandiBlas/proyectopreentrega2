@@ -148,7 +148,7 @@ p{
     padding: 0;
     width: 10%;
     max-width: 10px;
-    margin: auto;
+    margin: 0;
     text-align: center;
 }
 .tabla-1{
@@ -267,19 +267,7 @@ p{
     flex-wrap: wrap;
     justify-content: center;
 }
-/* Mobile Styles
-@media only screen and (max-width: 400px) {
-    body{
-        background-color: aqua;
-    }
-    .contenedorGrid{
-        grid-template: "navGrid navGrid"
-        "tituloGrid tituloGrid"
-        "cardGrid cardGrid"
-        "footerGrid footerGrid"/
-        200px auto;
-    }
-}*/
+
 /* Tablet Styles
 @media only screen and (min-width: 401px) and (max-width: 960px) {
     .contenedorGrid{
@@ -338,9 +326,8 @@ p{
         transition: 0.2s;
         z-index: 100;
     }
-    .tabla-2{
-        width: 560px;
-        height: 400;
+    .tabla-2, .tabla, .tabla-1{
+        width: 100vw;
     }
     .fa-bars{
         visibility: visible;
@@ -350,5 +337,47 @@ p{
     }
     nav ul:hover{
         left: 0;
+    }
+    .contenedorPreguntas img{
+        width: 100vw;
+    }
+}
+/* Mobile Styles */
+@media (max-width: 480px) {
+    nav ul{
+        position: fixed;
+        top: 0;
+        left: -250px;
+        background-color: #ffffff;
+        flex-direction: column;
+        width: 250px;
+        height: 100vh;
+        transition: 0.2s;
+        z-index: 100;
+    }
+    .tabla-2, .tabla, .tabla-1{
+        width: 100vw;
+    }
+    .tabla-1{
+        padding: 0;
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+    .fa-bars:hover + ul{
+        left: 0;
+    }
+    nav ul:hover{
+        left: 0;
+    }
+    .contenedorPreguntas img{
+        width: 100vw;
+    }
+    .contenedorGrid{
+        grid-template: "navGrid navGrid"
+        "tituloGrid tituloGrid"
+        "cardGrid cardGrid"
+        "footerGrid footerGrid"/
+        400px auto;
     }
 }
