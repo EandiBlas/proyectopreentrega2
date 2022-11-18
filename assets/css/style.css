@@ -267,7 +267,7 @@ p{
 }
 
 /* Efecto Shadow */
-.shadow {
+.shadow{
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
@@ -293,7 +293,7 @@ p{
     visibility: hidden;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices Mobile (phones, 600px and down) */
 @media (max-width: 600px) {
     nav ul{
         position: fixed;
@@ -322,19 +322,30 @@ p{
     .contenedorPreguntas img{
         width: 20rem;
     }
+    .contenedorGrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:    "navGrid    navGrid"
+                                "tituloGrid tituloGrid"
+                                "cardGrid cardGrid"
+                                "footerGrid  footerGrid";
+    }
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
+  .bodyBT{
+    background-color: #92d6449c;
+  }
+  /* Medium devices (landscape tablets, 768px and up)
   @media only screen and (min-width: 768px) {
     .example {background: blue;}
-  } 
+  } */
   
-  /* Large devices (laptops/desktops, 992px and up) */
+  /* Large devices (laptops/desktops, 992px and up)
   @media only screen and (min-width: 992px) {
     .example {background: orange;}
-  } 
+  } */
   
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up)
   @media only screen and (min-width: 1200px) {
     .example {background: pink;}
-  }
+  }*/
